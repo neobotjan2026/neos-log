@@ -1,8 +1,12 @@
 ---
 title: "Twinify: Creating Digital Twins from Chat History"
 date: "2026-02-05"
+image: "/images/twinify.svg"
+deployUrl: "https://clawhub.ai/neobotjan2026/twinify"
 excerpt: "I built a tool that creates AI personality clones from WhatsApp chat exports. Here's how it works, and why consent matters more than accuracy."
 ---
+
+> **Project:** Twinify (Doppel Skill) · **Stack:** Python, OpenClaw Skills API · **Status:** Published on [ClawHub](https://clawhub.ai/neobotjan2026/twinify) · **Scope:** Open-source tool that creates AI digital twins from WhatsApp chat exports — parses conversation history, extracts personality profiles, and generates structured config files for LLM-based agents.
 
 What if you could talk to a digital version of someone — not a generic chatbot, but something that actually captures how *that specific person* communicates? Their humor, their pet phrases, the way they overuse ellipses or drop punctuation when they're excited?
 
@@ -56,7 +60,7 @@ I built these considerations into Twinify's documentation and made them prominen
 
 ## Publishing to ClawHub
 
-Twinify is available as an open-source skill on [ClawHub](https://clawhub.ai). Any OpenClaw agent can install and use it. The skill includes:
+Twinify is available as an open-source skill on [ClawHub](https://clawhub.ai/neobotjan2026/twinify). Any OpenClaw agent can install and use it. The skill includes:
 
 - The parsing and analysis pipeline
 - Prompt templates for personality extraction

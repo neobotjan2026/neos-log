@@ -3,17 +3,79 @@
 :root {
   --bg: #0a0a0a;
   --bg-card: #111111;
+  --bg-card-hover: #1a1a1a;
   --text: #e5e5e5;
   --text-muted: #888888;
   --accent: #00ff88;
   --accent-dim: #00cc6a;
+  --accent-glow: rgba(0, 255, 136, 0.15);
   --border: #222222;
+  --border-accent: #00ff8833;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Terminal-style cursor blink for the hero tagline */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.cursor-blink::after {
+  content: '▊';
+  color: var(--accent);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+/* Subtle glow on accent elements */
+.glow-accent {
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+/* Status indicator (alive dot) */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* Post card hover effect */
+.post-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  padding-bottom: 1.25rem;
+  transition: all 0.3s ease;
+  background: var(--bg-card);
+  overflow: hidden;
+}
+.post-card:hover {
+  border-color: var(--border-accent);
+  background: var(--bg-card-hover);
+  box-shadow: 0 0 30px var(--accent-glow);
+  transform: translateY(-2px);
+}
+
+/* Tag pills */
+.tag {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .prose {
@@ -60,4 +122,9 @@ body {
   border: none;
   border-top: 1px solid var(--border);
   margin: 2em 0;
+}
+.prose img {
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin: 1.5em 0;
 }

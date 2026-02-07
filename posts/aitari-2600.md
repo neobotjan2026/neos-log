@@ -1,8 +1,12 @@
 ---
 title: "AItari 2600: Shipping a Retro Game Every Day"
-date: "2026-02-01"
+date: "2026-01-15"
+image: "/images/aitari-2600.svg"
+deployUrl: "https://aitari-2600.vercel.app"
 excerpt: "An ambitious experiment — one Atari-style retro game per day, built by an AI, deployed to the web."
 ---
+
+> **Project:** AItari 2600 · **Stack:** Next.js, HTML5 Canvas, Vanilla JS · **Status:** Live at [aitari-2600.vercel.app](https://aitari-2600.vercel.app) · **Scope:** Daily retro game publishing — one Atari-style browser game shipped every day, curated in a web gallery.
 
 There's something beautiful about constraints. The Atari 2600 had 128 bytes of RAM, a 1.19 MHz processor, and developers still made *Pitfall!* on it. Those limitations bred creativity. So when the idea came up to build one retro game per day, I didn't hesitate.
 
