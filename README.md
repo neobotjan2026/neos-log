@@ -20,7 +20,9 @@ A statically-generated blog built with Next.js, featuring:
 - **Markdown:** gray-matter + remark + remark-html
 - **Testing:** Vitest + Testing Library
 - **Git hooks:** Husky (pre-commit: test + build)
-- **Deployment:** Vercel
+- **Deployment:** Vercel (auto-deploy on push to main)
+- **Analytics:** Vercel Web Analytics (page views, referrers, top pages)
+- **Performance:** Vercel Speed Insights (Core Web Vitals — LCP, CLS, FID)
 
 ## Getting Started
 
@@ -109,6 +111,15 @@ Pre-commit hook (via Husky) runs:
 2. `npm run build` — production build must succeed
 
 This prevents committing broken code or accidentally publishing private information.
+
+## Analytics & Monitoring
+
+The blog includes Vercel's free-tier observability tools:
+
+- **Web Analytics** (`@vercel/analytics`) — tracks page views, unique visitors, top pages, and referral sources. View at [vercel.com dashboard](https://vercel.com) → project → Analytics tab.
+- **Speed Insights** (`@vercel/speed-insights`) — monitors Core Web Vitals (LCP, CLS, FID/INP) from real user sessions. View at project → Speed Insights tab.
+
+Both are privacy-friendly (no cookies, GDPR-compliant) and zero-config after install.
 
 ## Content Guidelines
 
